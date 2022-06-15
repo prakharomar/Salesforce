@@ -1,0 +1,18 @@
+<aura:component controller ="CL_createAcc_sobject">
+    <aura:attribute name="acc" type="Account" default ="{sObject:'Account'}" />
+    
+    <lightning:card title ="Account" iconName ="standard:account">
+        <lightning:input label="Account Name" value ="{!v.acc.Name}" />
+        <lightning:input label="Account Phone" value ="{!v.acc.Phone}" />
+        <lightning:input label="Account Fax" value ="{!v.acc.Fax}" />
+        <lightning:input label="Account Industry" value ="{!v.acc.Industry}" />	
+        
+        <aura:set attribute="footer">
+            <lightning:button label ="Savvee" onclick ="{!c.subme}" />
+            <lightning:button label ="Clear" onclick ="{!c.clear}" />
+           
+        </aura:set>
+    
+    </lightning:card>
+    
+</aura:component>

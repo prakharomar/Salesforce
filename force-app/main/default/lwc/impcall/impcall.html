@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Account Creation Using Imperation" icon-name="standard:account">
+        <lightning-input name="Account Name" label="Account Name" onchange={accnm}></lightning-input>
+        <lightning-input label="Account Phone" onchange={accph}></lightning-input>
+        <lightning-input label="Account Fax" onchange={accfx}></lightning-input>
+        <lightning-input label="Account Industry" onchange={accin}></lightning-input>
+       
+
+        <lightning-button label="Submit" onclick={saveme} variant="brand"></lightning-button>
+    </lightning-card>    
+</template>

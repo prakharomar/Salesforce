@@ -1,0 +1,21 @@
+<apex:page >
+   <apex:form > 
+    <apex:pageBlock >
+      
+    
+        Enter your name: <apex:inputText /> <br/> <br/>
+        Password: <apex:inputSecret /><br/><br/>
+        Age: <apex:inputHidden /><br/><br/>
+        Company: <apex:inputTextarea /><br/><br/>
+        Resume: <apex:inputFile value="Resume"></apex:inputFile>   <br/><br/>  
+       
+       <apex:pageBlockButtons >
+          <apex:commandButton value="Save"/>
+       </apex:pageBlockButtons>
+        
+   
+      
+    
+  </apex:pageBlock>
+    </apex:form>  
+</apex:page>

@@ -1,0 +1,32 @@
+<apex:page controller="CL_Get_Set_Account_Primitive">
+    <style>
+    	.mybox
+        {
+          color :{!clr};
+          font-size: 25px;
+          align: center;
+        }
+    
+    </style>
+    
+    
+    
+    <apex:form >
+        <div class ="mybox">
+          {!msg}
+        </div>	
+                     
+    	<apex:pageBlock >
+        	<apex:pageBlockSection title="Account Creation" columns="1">
+                <apex:inputText label="Account Name" value="{!accName}"/>
+                <apex:inputText label="Account Phone" value="{!accphone}"/>
+                <apex:inputText label="Account Fax" value="{!accFax}"/>
+                <apex:inputText label="Account Industry" value="{!accIndustry}"/>
+                <apex:inputText label="Account Rating" value="{!accRating}"/>
+                
+                <apex:commandButton value="Click to Save Account" action="{!CreateAcc}"/>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

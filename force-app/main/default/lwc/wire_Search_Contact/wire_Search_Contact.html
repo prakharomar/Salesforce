@@ -1,0 +1,30 @@
+<template>
+    <b>*********Wire A Property************</b> <br/>
+    *************Search Contact*************<p></p>
+
+    <lightning-input label="Search Contact" onchange={inputtext}></lightning-input>
+
+    <template if:true={prak.data}>
+        <template for:each={prak.data} for:item="con">
+            <p key={con.Id}>{con.FirstName}</p>
+        </template>
+    </template>
+    <template if:true={prak.error}> 
+        <p>There is an error> please try again </p>
+       </p> Error: {prak.error}</p>
+    </template>
+
+        <!-- Wire A Function-->
+        
+        <lightning-card title="Wire a Function" icon-name="standard:account">
+        <template if:true={mydata}>
+            <template for:each={mydata} for:item="md">
+                <p key={md.Id}>{md.FirstName} ------------> {md.LastName}</p>
+            </template>
+
+        </template>
+        <template if:true={myerror}>
+            Error occured {myerror}
+        </template>
+    </lightning-card>
+</template>

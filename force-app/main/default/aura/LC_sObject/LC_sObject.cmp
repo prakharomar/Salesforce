@@ -1,0 +1,15 @@
+<aura:component controller="CL_AuraEnabled_LC_sObject">
+     <aura:attribute name="accname" type ="String" />
+     <aura:attribute name="accPhone" type ="String" />
+     <aura:attribute name="accFax" type ="String" />
+     <aura:attribute name="accIndustry" type ="String" />
+    
+    <lightning:card title ="Account" iconName ="standard:account:">		
+        <lightning:input label="Account Name" value="{!v.accname}" />
+        <lightning:input label="Account Phone" value="{!v.accPhone}" />
+        <lightning:input label="Account Fax" value="{!v.accFax}" />
+        <lightning:input label="Account Industry" value="{!v.accIndustry}" />
+    
+        <lightning:button label="Savee" onclick="{!c.saveme}" />
+    </lightning:card>
+</aura:component>

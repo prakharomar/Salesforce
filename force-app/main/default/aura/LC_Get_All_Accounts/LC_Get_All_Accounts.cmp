@@ -1,0 +1,12 @@
+<aura:component controller="CL_Bring_all_Account" >
+    <aura:attribute name="acc" type="Account[]" />
+    <aura:attribute name="clm" type="List" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.loadme}"/>
+    
+    <lightning:card title ="Bring All Accounts" iconName="standard:account">
+       
+        <lightning:dataTable keyField="id"  data="{!v.acc}" columns="{!v.clm}"/> 
+    
+    </lightning:card>
+</aura:component>

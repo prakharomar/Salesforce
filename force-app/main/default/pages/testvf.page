@@ -1,0 +1,7 @@
+<apex:page >
+    
+    <apex:pageBlock title="Get tested">
+    
+    </apex:pageBlock>
+    
+</apex:page>

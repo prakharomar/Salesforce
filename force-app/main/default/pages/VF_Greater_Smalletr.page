@@ -1,0 +1,22 @@
+<apex:page controller="CL_Greater_Smaller" >
+    <apex:form >
+    <apex:pageBlock >
+        {!msg}
+      	<apex:pageBlockSection title="Greater or Smaller" columns="1">
+            <apex:inputText label="Enter First number" value="{!Num1}"/>
+            <apex:inputText label="Enter Second number" value="{!Num2}"/>
+            <apex:inputText label="Enter Third number" value="{!Num3}"/>
+            
+            <apex:selectRadio label="Enter the choice" value="{!Choice}">
+                <apex:selectOption itemLabel="Greater" itemValue="GRTR" ></apex:selectOption>
+            	<apex:selectOption itemLabel="Smaller" itemValue="SMLR" ></apex:selectOption>
+            </apex:selectRadio>
+            
+            <apex:commandButton value="Click to Calculate" action="{!mainmethod}"/>
+            
+            <apex:outputText label="The Result is" value="{!Result}"></apex:outputText>
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

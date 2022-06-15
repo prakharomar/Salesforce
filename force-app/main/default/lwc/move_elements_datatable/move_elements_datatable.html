@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="DataTable 1">
+        <lightning-datatable key-field="Id"
+                             data={contactdata1} 
+                             columns={col}
+                             onrowselection={handlechange}                                                         
+        ></lightning-datatable>
+    </lightning-card>
+    <lightning-card title="DataTable 2">
+        <lightning-datatable key-field="Id"
+                             data={contactdata2} 
+                             columns={col}                                                        
+        ></lightning-datatable>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<apex:page standardController="Opportunity" recordSetVar="opp">
+   <apex:form >
+    <apex:pageblock title="Opportunity Modification">
+    <apex:pageBlockButtons >
+    <apex:commandButton value="Save"  action="{!save}"/>
+    <apex:commandButton value="QuickSave" action="{!quickSave}"/>
+    </apex:pageBlockButtons>
+    
+    
+    <apex:pageblockTable value="{!opp}" var="o">
+    
+    <apex:column value="{!o.Name}" />
+    <apex:column headerValue="Stage">
+      <apex:inputfield value="{!o.StageName}"/>
+     </apex:column> 
+    
+    
+    </apex:pageblockTable>
+    
+    </apex:pageblock>
+    </apex:form>
+</apex:page>
