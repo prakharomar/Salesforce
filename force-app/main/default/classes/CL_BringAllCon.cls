@@ -18,5 +18,3 @@ public class CL_BringAllCon
         System.debug('msg');
     }
 }
-
-git pull origin Salesforce-Master  --allow-unrelated-histories
