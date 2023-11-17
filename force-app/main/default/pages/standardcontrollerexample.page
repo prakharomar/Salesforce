@@ -1,0 +1,24 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageBlock title="My Controller for Account" mode="edit">
+        <apex:pageblockButtons >
+           
+            <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton value="Quick Save" action="{!quickSave}"/>
+            <apex:commandButton value="Lisssst" action="{!list}"/>
+            <apex:commandButton value="Edit" action="{!edit}"/>
+            <apex:commandButton value="Delete" action="delete"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageblockButtons>
+        
+            <apex:pageBlockSection title="First Section" columns="3" >
+              <apex:inputField value="{!account.name}"/>
+              <apex:inputField value="{!account.AccountNumber}"/>
+              <apex:inputField value="{!account.Phone}"/>
+              <apex:inputField value="{!account.Industry}"/>
+              <apex:outputField value="{!account.CreatedById}"/>
+            
+            </apex:pageBlockSection>
+        </apex:pageblock>    
+    </apex:form>
+</apex:page>

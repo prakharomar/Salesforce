@@ -1,0 +1,123 @@
+<template>
+
+    <lightning-card    title="Contact Custom List View" icon-name="standard:contact">
+       <div slot="actions">
+           <lightning-button  label="Create Contact" onclick={navigateToNewPage}></lightning-button>
+           <lightning-button  label="Delete Selected Contact" onclick={deleteSelectedContacts}></lightning-button>
+       </div>
+       
+        
+        <div class="slds-card__body_inner">
+            <p> Selected Conatcts : {selectedContactLen} </p>
+
+            <div class="slds-p-left_x-small slds-p-bottom_x-small slds-grid slds-guttes">
+                <lightning-input type="search" onchange={handleSearch} ></lightning-input>
+            </div>   
+        </div>
+
+
+        <lightning-datatable
+            key-field="id"
+            data={contacts}
+            columns={cols}
+            onrowselection={handleRowSelection}
+            onrowaction={handleRowAction}
+            sorted-by={sortBy}
+            sorted-direction={sortDirection}
+            onsort={doSorting}
+            > 
+            </lightning-datatable>
+
+    </lightning-card>
+    <!-- modal start -->      
+   <template if:true={isShowModal}>
+
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-02" aria-modal="true" aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Edit Screen</h2>
+          </header>
+      
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                
+                <lightning-input type="text"   label="Enter Firstname" value={recContact.FirstName} placeholder="type here..." onchange={handleFirstNameChange}></lightning-input>
+                <lightning-input type="text"   label="Enter Lastname" value={recContact.LastName} placeholder="type here..." onchange={handleLastNameChange}></lightning-input>
+             <!--   <c-custom-lookup obj-name="Account" search-placeholder="Search Accounts"  icon-name="standard:account" onlookupselected={handleAccountSelection}> </c-custom-lookup> -->
+                <lightning-input type="text"   label="Enter Email" value={recContact.Email} placeholder="type here..." onchange={handleEmailChange}></lightning-input>
+               <c-lwc-lookup lookup-label="Account" object-api-name="account" icon-name="standard:account"  
+       onrecordselection={onAccountSelection} selected-record-id ={currentModalAccountId} selected-value = {accountName}></c-lwc-lookup>  
+       
+               <!-- <p>Contact Name : {firstname} {lastname}  </p>
+                <p>Account Name : {accountName} </p>
+                <p>Email : {email} </p>
+                <p>Mailing Address : {mailingAddress}</p>  -->
+          </div>
+
+          <!-- modal footer start-->
+          <footer class="slds-modal__footer">
+            
+            <button class="slds-button slds-button_neutral" onclick={test}>Next</button>
+             <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+          </footer>
+       
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+ </template>
+ <!-- modal end -->
+
+ <template if:true={isShowModal2}>
+
+            <!--
+                I Used SLDS for this code
+                Here is link https://www.lightningdesignsystem.com/components/modals/
+            --> 
+
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-02" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox2}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Edit Screen</h2>
+          </header>
+      
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <p>
+                   <lightning-input type="checkbox" label="Do you want to edit the Mailing Address of the record" data-id="input1" onchange={handleInput}></lightning-input>
+                </p>
+               <template if:true={checkForMaillingAddress}>
+                  <lightning-input type="text"   label="Enter Mailling Street"  value={recContact.MailingStreet} placeholder="type here..." onchange={handleStreetChange}></lightning-input>
+                  <lightning-input type="text"   label="Enter Mailing State"    value={recContact.MailingState}  placeholder="type here..."  onchange={handleStateChange}></lightning-input>
+                   <lightning-input type="text"   label="Enter Country"          value={recContact.MailingCountry} placeholder="type here..." onchange={handleCountryChange}></lightning-input>
+               </template>
+          </div>
+
+          <!-- modal footer start-->
+          <footer class="slds-modal__footer">
+             <button class="slds-button slds-button_neutral" onclick={saveButton} >Save</button>
+             <button class="slds-button slds-button_neutral" onclick={hideModalBox2}>Cancel</button>
+          </footer>
+       
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+ </template>
+
+
+</template>

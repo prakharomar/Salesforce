@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" controller="ContactController">    
+    <!-- Dynamically load the list of contacts -->
+    <aura:attribute name="inputValue" type="String"/>
+    <lightning:utilityBarAPI aura:id="utilitybar" />
+    
+     <aura:attribute name="lengthof" type="Integer" />
+    <aura:attribute name="textareaValue" type="String" default="Hello, World!" />
+
+    <lightning:textarea aura:id="myTextarea" value="{!v.textareaValue}"  onchange="{!c.handleInputChange}" label="My Textarea" />
+    
+    <lightning:button label="Get Length" onclick="{!c.getTextareaLength}" />
+    {!v.lengthof}
+    
+    
+    
+    <Lightning:card>
+   <c:helloWorld onvaluechange="{!c.getValueFromLwc}" ></c:helloWorld>
+        </Lightning:card>
+</aura:component>

@@ -1,0 +1,20 @@
+<aura:component >
+    <aura:attribute name ="empname" type="String" default ="Prakhar"/>
+    <aura:attribute name ="empage" type="Integer"/>
+    <aura:attribute name ="empsalary" type="decimal" />
+                                                   
+    <lightning:card title="Attributes(Variable)">
+    	Employee Name : {!v.empname}		<p></p>
+        Employee Age :   {!v.empage}		<p></p>
+        Employee Salary : {!v.empsalary}	<p></p>
+        
+        <aura:set attribute="actions">
+        	<lightning:buttonGroup>
+            <lightning:button label="Submit" onclick="{!c.subme}" variant ="success"/>
+            <lightning:button label ="Clear" onclick="{!c.clearme}" variant ="destructive"/>
+            </lightning:buttonGroup>
+        </aura:set>
+       
+    </lightning:card>
+	
+</aura:component>

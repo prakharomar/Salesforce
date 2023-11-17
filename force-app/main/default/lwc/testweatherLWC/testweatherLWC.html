@@ -1,0 +1,90 @@
+<template>
+    <!--
+    <div if:true={val.data}>
+        Tempearture in Kelvin {val.data} <br/>
+        Tempearture in celsius {getTempInCelsius}
+    </div>
+     <div>
+        <lightning-layout>
+        <lightning-layout-item size="12"  padding="around-small">
+            <lightning-card icon-name="standard:topic" title="Weather Information">
+                <div class="slds-p-left_xx-large color-blue">
+                    <template if:true={val.data}>
+                        <span class="slds-page-header__title slds-truncate" title="Temperature">{gettempInCelsius} {getpressure}</span>
+                    </template>
+                </div>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+    </div>
+    -->
+   <!--<div if:true={getCountry}> -->
+    <lightning-card title="City Weather Info" icon-name="standard:topic">
+        <div class="slds-var-p-around_small">
+            <div class="slds-p-horizontal_small">
+                <div class="slds-form" role="list">
+                    <div class="slds-form__row">
+                        <div class="slds-form__item" role="listitem">
+                            <div
+                                class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
+                                <span class="slds-form-element__label">City Name</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        {getCityName} 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form__item" role="listitem">
+                            <div
+                                class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
+                                <span class="slds-form-element__label">City Temperature</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        {gettempInCelsius} celsius
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="slds-form__row">
+                        <div class="slds-form__item" role="listitem">
+                            <div
+                                class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
+                                <span class="slds-form-element__label">Pressure</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        {getpressure} hpa
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form__item" role="listitem">
+                            <div
+                                class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
+                                <span class="slds-form-element__label">Minimum Tempearture</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        {getMinTemp} celsius
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form__item" role="listitem">
+                            <div
+                                class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
+                                <span class="slds-form-element__label">Maximum Tempearture</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        {getMaxTemp} celsius
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+   <!--</div> -->
+</template>

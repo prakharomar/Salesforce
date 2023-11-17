@@ -1,0 +1,25 @@
+<apex:page standardController="Account" extensions="testweather">
+
+<apex:pageBlock title="{!city} Weather">
+
+<apex:pageBlockSection >
+
+<apex:outputText label="Temperature" value="{!temp}"></apex:outputText>
+
+<apex:outputText label="Humidity" value="{!humid}"></apex:outputText>
+
+<apex:outputText label="Pressure" value="{!pressure}"></apex:outputText>
+
+<apex:outputText label="Temperature Minimum" value="{!temp_min}"></apex:outputText>
+
+<apex:outputText label="Temperature Maximum" value="{!temp_max}"></apex:outputText>
+    
+<apex:outputText label="Sunrise" value="{!sunrise}"></apex:outputText>
+
+<apex:outputText label="Sunset" value="{!sunset}"></apex:outputText>    
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:page>

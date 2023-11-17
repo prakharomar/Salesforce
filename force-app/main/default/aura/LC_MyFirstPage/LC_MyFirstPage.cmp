@@ -1,0 +1,21 @@
+<aura:component >
+    <lightning:button label ="Submit" iconName= "utility:bug"/>
+    <lightning:button label ="Submit 1" variant ="brand" iconName= "utility:answer" iconPosition ="right"/>
+    <lightning:button label ="Submit 2" variant ="success"/>
+    <lightning:button label ="Submit 3" variant ="destructive"/>
+    <lightning:button label ="Submit 4" variant ="base"/>
+    
+    <lightning:buttonIcon alternativeText ="Setup" iconName ="utility:setup" variant ="bare" />
+    <lightning:buttonIcon iconName ="utility:notification" alternativeText ="Notification" size="large" />
+    
+    <lightning:buttonMenu alternativeText = "Prakhar">
+      <lightning:menuSubheader label="Courses"/>   
+        <lightning:menuItem label="Salesforce" value="sfdc" />
+    	<lightning:menuItem label="Java" value="java" />
+        
+     <lightning:menuSubheader label ="Calculation" />
+        <lightning:menuItem label="Greater" value="G" />
+        <lightning:menuItem label="Smaller" value="S" />
+        
+    </lightning:buttonMenu>
+</aura:component>

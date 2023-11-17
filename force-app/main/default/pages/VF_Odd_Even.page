@@ -1,0 +1,18 @@
+<apex:page controller="CL_Odd_Even" >
+    <apex:form >
+    	<apex:pageBlock >
+            {!msg}
+        	<apex:pageBlockSection title="Sum of Odd Even Number up to given number" columns="1"> 
+            	<apex:inputText label="Enter the number " value="{!num}"/>
+                
+                <apex:selectRadio label="Select the choice" value="{!choice}">
+                    <apex:selectOption itemLabel="Even" itemValue="even"></apex:selectOption>
+                    <apex:selectOption itemLabel="Odd" itemValue="odd"></apex:selectOption>
+                </apex:selectRadio>
+                
+                <apex:commandButton value="Click to Calculate" action="{!calculate}"/>
+                <apex:outputText label="The Result is" value="{!result}"></apex:outputText>
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

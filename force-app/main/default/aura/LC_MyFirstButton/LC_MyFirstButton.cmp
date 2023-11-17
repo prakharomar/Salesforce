@@ -1,0 +1,18 @@
+<aura:component >
+	<lightning:button label ="Follow" iconName ="utility:add"/>
+    
+  <lightning:buttonGroup>
+    <lightning:button label ="New Contact" />
+    <lightning:button label ="New Case" />
+    <lightning:button label ="New Notes" />
+ 
+    
+       <lightning:buttonMenu alternativeText="Menu">
+        <lightning:menuItem label="New Opportunity" value = "nopp"/>
+         <lightning:menuItem label="Change Owner" value = "co"/>
+         <lightning:menuItem label="Check for New Data" value = "data"/>
+         <lightning:menuItem label="Submit for Approval" value = "app"/>
+         <lightning:menuItem label="Edit" value = "edit"/>
+    </lightning:buttonMenu>
+       </lightning:buttonGroup>
+</aura:component>

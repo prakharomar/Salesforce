@@ -1,0 +1,56 @@
+<apex:page standardcontroller="Account">
+    
+   <apex:tabPanel >
+    <apex:tab label=" Account EDIT AND NEW">
+       <apex:form >
+           <apex:pageBlock >
+        <apex:pageBlockSection title="Account Details">
+         	<apex:inputField value="{!Account.Name}" label="Enter first number" />   
+      		  <apex:inputField value="{!Account.Fax}"/>
+      		  <apex:inputField value="{!Account.Sic}"/>
+     		   <apex:inputField value="{!Account.Industry}"/>
+            <apex:inputText label="ENnfef"/>
+           
+           </apex:pageBlockSection>
+                 </apex:pageBlock>
+        </apex:form>
+         
+       </apex:tab>
+       
+      <apex:tab label=" READ ONLY">
+       <apex:pageBlock title="General">
+    <apex:pageBlockSection title="Account IInfo">
+        <apex:outputField value="{!Account.Name}" />   
+        <apex:outputField value="{!Account.Fax}"/>
+        <apex:outputField value="{!Account.Sic}"/>
+        <apex:outputField value="{!Account.Industry}"/>
+     </apex:pageBlockSection>
+       
+        
+  
+    <apex:pageBlockSection title="Related List" columns="1" >
+        <apex:relatedList list="contacts"/>
+        <apex:relatedList list="opportunities"/>
+     </apex:pageBlockSection>
+    
+       
+      <apex:pageBlockSection title="Related List Custom View" columns="1">
+       <apex:pageBlockTable value="{!Account.contacts}" var="ac">
+           <apex:column value="{!ac.FirstName}"/>
+           <apex:column value="{!ac.LastName}"/>
+           <apex:column value="{!ac.MobilePhone}"/>
+          
+          </apex:pageBlockTable>          
+       
+       </apex:pageBlockSection>
+       
+       <apex:pageBlockSection title="SOS" columns="1"> 
+           <apex:detail />
+       
+       </apex:pageBlockSection>
+       
+    </apex:pageBlock>
+       </apex:tab> 
+    </apex:tabPanel>
+
+</apex:page>

@@ -1,0 +1,21 @@
+.THIS .myinp 
+{
+    color:blue;
+    background:yellow;
+}
+
+.THIS.mybox
+{
+    color:red;
+    background:green;
+    margin-left: 400px;
+    margin-top: 10px;
+    margin-right: 400px;
+    text-align:center;
+}
+.THIS .mybtn
+{
+    color:blue;
+    background-color:red;
+    
+}

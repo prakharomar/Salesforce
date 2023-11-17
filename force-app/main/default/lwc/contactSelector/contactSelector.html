@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="ContactSelector" icon-name="custom:custom29">
+        <div class="slds-card__body slds-card__body_inner">
+            <template if:true={contactOptions}>
+                <lightning-combobox
+                    label="Select a Contact"
+                    options={contactOptions}
+                    onchange={handleRecordSelected}
+                    field-level-help="Only the first ten records are displayed to keep it simple"
+                    class="slds-var-m-bottom_medium"
+                    required
+                ></lightning-combobox>
+            </template>
+        </div>
+        </lightning-card>
+</template>

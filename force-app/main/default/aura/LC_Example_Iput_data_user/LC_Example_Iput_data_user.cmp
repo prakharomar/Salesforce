@@ -1,0 +1,19 @@
+<aura:component >
+    <lightning:card title ="Lightning Input">
+        <lightning:input label ="Employee First Name" type ="text" />
+        <lightning:input label ="Employee Last Name" type ="text" />
+        <lightning:input label ="Employee Phone" type ="Phone" />
+        <lightning:input label ="Employee Email" type ="Email" />
+        <lightning:input label ="Employee Date of Birth" type ="Date" />
+        <lightning:input label ="Employee Lucky Time" type ="Time" />
+        <lightning:input label ="Employee Date and Time" type ="datetime" />
+        <lightning:input label ="Employee Fav Colour" type ="Color" />
+        <lightning:input label ="Employee Password" type ="Password" required="true" />
+        <lightning:input label ="Employee Girl Friend" type ="Search" />
+        <lightning:input label ="Employee Lucky Number" type ="number" />
+       
+    
+    
+    </lightning:card>
+    
+</aura:component>

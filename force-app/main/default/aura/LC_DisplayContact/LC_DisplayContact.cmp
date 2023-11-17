@@ -1,0 +1,18 @@
+<aura:component controller ="CL_BringAllCon">
+    <aura:attribute name="con" type="Contact[]"  />
+    <aura:attribute name="clm" type="List"  />
+    
+    <!-- <aura:handler name ="init" value="{!this}" action="{!c.loadme}"   />
+    		-->
+    
+    
+    <lightning:card title="Bring All Contacts" iconName="standard:contact">
+        <lightning:dataTable keyField="id" data="{!v.con}" columns="{!v.clm}"/>  
+        
+        <aura:set attribute ="footer">
+            <lightning:button label ="Bring" variant="success" onclick="{!c.loadme}"/>
+        </aura:set>
+        
+    </lightning:card>
+    
+</aura:component>

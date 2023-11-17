@@ -1,0 +1,36 @@
+<aura:component >
+    <aura:attribute name="principal" type="Integer" />
+    <aura:attribute name="rate" type="Integer" />
+    <aura:attribute name="year" type="Integer" />
+    <aura:attribute name="interest" type="String" />
+    <aura:attribute name="total" type="String" />
+    
+    
+    <lightning:card iconName="utility:bug" >
+    	<aura:set attribute="title" >	
+            HDFC Bank <br/>
+            Investment Calculator
+        </aura:set>
+       
+        <aura:set attribute ="actions">
+            <lightning:button label ="Calculate" onclick ="{!c.cal}"/>
+        	<lightning:button label ="Clear" onclick ="{!c.clear}"/>
+        </aura:set>
+        
+        <lightning:input label="Principal" type="Integer"  value ="{!v.principal}"/>
+        <lightning:input label="Rate of Interest" type="Integer"  value ="{!v.rate}"/>
+        <lightning:input label="Tenure in Years" type="Integer"  value ="{!v.year}"/>
+        
+        <p></p>
+        <p></p>
+        Result:<br></br>
+        Interest accumalted <br></br>
+        {!v.interest}
+        <br></br>
+        Total Maturaity Amount <br></br>
+        {!v.total}
+        
+    </lightning:card>
+    
+    
+</aura:component>

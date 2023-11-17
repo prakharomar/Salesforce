@@ -1,0 +1,26 @@
+<aura:component >
+    <aura:attribute name="name" type="String" />
+    <aura:attribute name="amountinvested" type="Integer" />
+    <aura:attribute name="years" type="Integer" default="10" />
+    <aura:attribute name="interest" type="Integer" default ="5"/>
+     <aura:attribute name="interestpaid" type="Integer" />
+     <aura:attribute name="amountpaid" type="Integer" />
+    
+    
+    <lightning:card>	
+    	<aura:set attribute="title">
+        <b>Investment Return Calculator</b>
+        </aura:set>
+        
+        <lightning:input label="Enter your Name" type ="String" />
+        <lightning:input label="Enter your Investment Amount" type ="Integer" value="{!v.amountinvested}" />
+        
+         <lightning:slider label="Years"  value="{!v.years}" max ="50" min ="1"/>
+        <lightning:slider label="ROI" step="0.1" value="{!v.interest}" max ="10" min ="2"/>
+    
+        <lightning:button label="Calculate" variant ="brand" onclick="{!c.callme}"/>
+        <br/>
+        <b>The Interest Accumalated is:   {!v.interestpaid}</b> <br/>
+        <b>The Maturity Amount is : {!v.amountpaid}</b>
+    </lightning:card>
+</aura:component>

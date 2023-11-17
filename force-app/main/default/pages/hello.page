@@ -1,0 +1,19 @@
+<apex:page sidebar="true" showHeader="true">
+    <apex:pageBlock title="First Block">
+      <apex:pageBlockSection title="First Section">
+        <apex:pageBlockSectionItem >Prakhar</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >Salesforce Developer</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >Salesforce Architect</apex:pageBlockSectionItem>
+  
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Second Section">
+                <apex:pageBlockSectionItem > adasdasdas </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+      
+    
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Second Block">
+    
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,21 @@
+<apex:page controller="CL_CustomSettings" >
+    <apex:form >
+        <div class='box'>
+            {!msg}
+        </div>
+    	<apex:pageBlock >
+            <apex:pageBlockSection >
+            	<apex:inputText label="Enter First Name" value="{!firstname}"/>
+                <apex:inputText label="Enter Last Name" value="{!Lastname}"/>
+                <apex:commandButton value="Click to Save" action="{!CreateCon}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <style>	
+      .box
+        {
+           color: {!msgclr};
+        }
+    </style>
+</apex:page>

@@ -1,0 +1,29 @@
+.left_bar{
+    margin-left: 900px;
+}
+.left_bar li 
+{
+    display: inline;
+}
+.left_bar_icon
+{
+    padding-left: 20px;    
+}
+.vertical_bar li 
+{
+    display: block;
+    width: 20px;
+}
+.aside_nav_bar
+{
+    width: 60px;
+}
+.hide
+{
+    width: 30px;
+}
+.left_bar_icon1
+{
+    padding-top: 10px;
+    padding-left: 10px; 
+}

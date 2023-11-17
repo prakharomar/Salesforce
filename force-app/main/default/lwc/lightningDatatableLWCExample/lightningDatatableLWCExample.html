@@ -1,0 +1,12 @@
+<template>
+    <h2> Account Datatable</h2>
+    <lightning-input label="Enter Account Name" type="search"  onchange={searchContact} value={searchKey}></lightning-input>
+
+    <template if:true={accList}>
+        <lightning-datatable data={accList} columns={columns} key-field="Id">
+        </lightning-datatable>
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>
+</template>

@@ -1,0 +1,20 @@
+<template>
+        <lightning-card  variant="Narrow"  title="Delete Contact" icon-name="standard:contact">
+            <table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;" class="tblColPad">
+             <tr>
+                 <th>First Name</th>
+                 <th>Last Name</th>
+                 <th>Email</th>
+                 <th> </th>
+             </tr>
+             <template for:each={mycon} for:item="conItem">
+                 <tr key={conItem.Id}>
+                     <td>{conItem.FirstName}</td>
+                     <td>{conItem.LastName}</td>
+                     <td>{conItem.Email}</td>
+                     <td><lightning-button label="Delete" size="small" variant="neutral" onclick={handleContactDelete} value={conItem.Id} icon-name="utility:delete" icon-position="right" class="deleteButton"></lightning-button></td>
+                 </tr>
+             </template>
+         </table>
+        </lightning-card>
+</template>

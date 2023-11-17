@@ -1,0 +1,34 @@
+<aura:component >
+     <aura:attribute name="num1" type ="Integer"/>
+     <aura:attribute name="num2" type ="Integer"/>
+     <aura:attribute name="num3" type ="Integer"/>
+     <aura:attribute name="Result" type ="String"/>
+    
+    <lightning:card title="Greater and Smaller" iconName ="utility:bug">
+         <lightning:input label ="Enter first number"   value = "{!v.num1}"/>
+         <lightning:input label ="Enter Second number"  value = "{!v.num2}"/>
+         <lightning:input label ="Enter Third number"   value = "{!v.num3}"/>
+        
+        <aura:set attribute ="actions">	
+        	<lightning:buttonGroup>
+                <lightning:button label="Calculate"  iconName="utility:light_bulb" variant ="brand" onclick="{!c.callme}" />
+                <lightning:button label="Clear"  iconName="utility:magicwand" variant ="destructive" onclick ="{!c.killme}" />
+            </lightning:buttonGroup>
+        </aura:set>
+        
+         <aura:set attribute ="footer">	
+        	<lightning:buttonGroup>
+                <lightning:button label="Calculate"  iconName="utility:light_bulb" variant ="brand" onclick="{!c.callme}" />
+                <lightning:button label="Clear"  iconName="utility:magicwand" variant ="destructive" onclick ="{!c.killme}" />
+            </lightning:buttonGroup>
+        </aura:set>
+        
+        <p></p>
+        <b>**********************Result************</b>
+        <p></p>
+        The Greater number is : {!v.Result}
+        
+        
+    </lightning:card>
+    
+</aura:component>

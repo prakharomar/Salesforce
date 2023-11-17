@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name ="empname" type="String" />
+    <aura:attribute name ="empct" type="String" />
+    <aura:attribute name ="empid" type="Integer" />
+    
+    <div class="mybox">
+    	Welcome to Spice Jet Registration form
+    </div>
+    
+    <lightning:card title ="CSS">
+        <lightning:input label ="Enter Emp Name"  value="{!v.empname}" class ="myinp" />
+        <lightning:input label ="Enter Emp Name"  value="{!v.empct}" />
+        <lightning:input label ="Enter Emp Name"  value="{!v.empid}" />
+    	
+       <lightning:button label="Submit"  onclick ="{!c.subme}" class="mybtn"/>
+        
+    </lightning:card>
+     
+</aura:component>

@@ -1,0 +1,44 @@
+<aura:component >
+	<lightning:card title ="Acc Cements">
+    	Hi Guys this is body of the card
+    </lightning:card>
+    
+	<lightning:card title ="Ambuja Cements" footer="Copyrbdiufsdf">
+    	Hi Guys this is body of the card
+    </lightning:card>   
+    
+    <lightning:card title ="Penna Cements">
+    	<aura:set attribute ="actions">
+            <c:LC_MyFirstButton/>
+        </aura:set>
+        <aura:set attribute ="footer">
+             Text Try
+        </aura:set>
+    </lightning:card>
+    
+    <lightning:card iconName ="standard:account" >	
+    	<aura:set attribute ="title">	
+            Account <br/>
+            <b>Account Name</b>
+            <lightning:buttonIcon alternativeText="ANything" iconName="utility:hierarchy"/>
+        </aura:set>
+    	
+        <aura:set attribute ="actions">	
+         	<c:LC_MyFirstButton/>
+        </aura:set>
+        
+        Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Account Owner
+        <br/>
+        Customer- Direct&nbsp;&nbsp;&nbsp;&nbsp; +91-8004778379&nbsp;&nbsp;&nbsp;&nbsp;www.omar.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prakhar
+    </lightning:card>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</aura:component>

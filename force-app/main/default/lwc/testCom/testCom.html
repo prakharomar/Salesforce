@@ -1,0 +1,17 @@
+<template>
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+    
+
+
+
+<template for:each={mydata} for:item="obj">
+    <div key={obj.id}>
+        <lightning-formatted-rich-text value ={obj.Travel_Experience__c} > </lightning-formatted-rich-text>
+    </div>
+
+
+
+</template>
+
+</lightning-card>
+</template>
