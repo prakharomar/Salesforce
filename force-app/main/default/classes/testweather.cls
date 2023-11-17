@@ -83,7 +83,12 @@ public with sharing class testweather {
             temp_max = String.valueOf(mainResults.get('temp_max'));
             
         }
+<<<<<<< HEAD
         else   
+=======
+        else
+            
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
         {
             
             ApexPages.message myMsg=new ApexPages.Message(ApexPages.Severity.ERROR,'There was an error in reading data.');
@@ -91,6 +96,12 @@ public with sharing class testweather {
             ApexPages.addMessage(myMsg);
             
         }
+<<<<<<< HEAD
 
+=======
+        
+        
+        
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
     }
 }

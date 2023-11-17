@@ -6,11 +6,17 @@ export default class ModalDemoInLWC extends LightningElement
     @track isShowModal = false;
     fname;
     lname ;
+<<<<<<< HEAD
     emaill;
     phn;
     faxxx;
     @api recordId;
     accounid;
+=======
+    faxxx;
+    @api recordId;
+   
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
     showModalBox() {  
         this.isShowModal = true;
     }

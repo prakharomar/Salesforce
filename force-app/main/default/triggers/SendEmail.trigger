@@ -1,6 +1,9 @@
 trigger SendEmail on Contact (before insert)
 {
+<<<<<<< HEAD
     /*
+=======
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
     CreateContactTrigger__c TC =  CreateContactTrigger__c.getInstance(UserInfo.getUserId());
     
 	If(TC.Send_Email_Automatically__c == true)
@@ -11,6 +14,7 @@ trigger SendEmail on Contact (before insert)
            E.Mbody ='No body';
            E.SendEmail(); 
     }
+<<<<<<< HEAD
     
     Contact[] cont =[Select name, Account.Name from contact where id in: Trigger.new];
     Map<ID, String> mpAcc = new Map<Id, String>();
@@ -42,4 +46,6 @@ trigger SendEmail on Contact (before insert)
             System.debug(C.FirstName);
         }
     }
+=======
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <aura:component  implements="force:lightningQuickAction,force:hasRecordId" controller ="CL_createAcc_sobject" >
     <aura:attribute name="acc" type="Account" default ="{sObject:'Account'}" />
     <aura:attribute name="acclist" type="Account[]" />
@@ -5,6 +6,12 @@
      <ltng:require scripts=""  afterScriptsLoaded="{!c.scriptsLoaded}" />
     <!--
     <lightning:card >
+=======
+<aura:component controller ="CL_createAcc_sobject">
+    <aura:attribute name="acc" type="Account" default ="{sObject:'Account'}" />
+    
+    <lightning:card title ="Account" iconName ="standard:account">
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
         <lightning:input label="Account Name" value ="{!v.acc.Name}" />
         <lightning:input label="Account Phone" value ="{!v.acc.Phone}" />
         <lightning:input label="Account Fax" value ="{!v.acc.Fax}" />
@@ -17,6 +24,7 @@
         </aura:set>
     
     </lightning:card>
+<<<<<<< HEAD
     -->
     
     <lightning:card>
@@ -83,4 +91,7 @@
             <div class="slds-backdrop slds-backdrop_open"></div>
         </aura:if>
     </div>
+=======
+    
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
 </aura:component>

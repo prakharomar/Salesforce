@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ({ /*
+=======
+({
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
 	subme : function(component, event, helper) 
     {
 		//step 0 bring the data from component
@@ -26,6 +30,7 @@
     {
         
         component.set("v.acc",{});
+<<<<<<< HEAD
     },
     */
     allAccount : function(component, event, helper)
@@ -63,4 +68,7 @@
             window.print();
         }, 2000);
  }
+=======
+    }
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
 })

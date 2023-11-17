@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { LightningElement, wire, track,api} from 'lwc';
 import pasdata from '@salesforce/apex/CL_BringAllCon.pasdata';
 import getContactRecords from '@salesforce/apex/ContactController.getContactRecords';
@@ -167,4 +168,14 @@ formattedDate;
     // recordIdString = this.recordId.toString();
     
   
+=======
+import { LightningElement } from 'lwc';
+
+export default class HelloWorld extends LightningElement 
+{
+    greeting = 'World';
+    changeHandler(event) {
+      this.greeting = event.target.value;
+    }
+>>>>>>> f4d970963077af1170b3d65d2a43c50573f0d34b
 }
