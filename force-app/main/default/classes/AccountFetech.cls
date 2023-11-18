@@ -1,8 +1,14 @@
-public with sharing class AccountFetech 
+public  class AccountFetech 
 {
-    // added check
-    public static List<Account> getAcc()
-    {
-        return [Select id,Name, Phone, Industry from Account Limit 10];
-    }    
+  
+    @AuraEnabled
+    public static String addComment(String recordId, String comment){
+
+        FeedItem post = new FeedItem();
+        post.ParentId = recordId;
+        post.Body = comment;
+        insert post;
+
+        return 'Success';
+    }
 }
