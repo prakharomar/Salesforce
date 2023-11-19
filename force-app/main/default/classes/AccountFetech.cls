@@ -1,6 +1,19 @@
 public  class AccountFetech 
 {
-  
+    public static List<Account> getAcc()
+    {
+        return [Select id,Name, Phone, Industry from Account Limit 10];
+    }
+
+    @AuraEnabled(cacheable=true)
+    public static List<String> fetchRecords(String componentName){
+
+        // fetch records
+        // ignore the parameter we don't need it
+        String response = null;
+        return null;
+    }    
+
     @AuraEnabled
     public static String addComment(String recordId, String comment){
 
