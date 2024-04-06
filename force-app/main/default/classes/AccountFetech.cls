@@ -24,4 +24,19 @@ public  class AccountFetech
 
         return 'Success';
     }
+
+    @AuraEnabled
+     public static void addComment1(String recordId, String comment){
+
+         List<ProcessInstanceWorkitem> wis = [
+                                      SELECT Id, ProcessInstance.TargetObjectId 
+                                FROM   ProcessInstanceWorkitem];
+
+         Map<Id, ProcessInstanceWorkitem> mapi = new Map<Id, ProcessInstanceWorkitem>();
+         for(ProcessInstanceWorkitem p : wis){
+             mapi.put(p.ProcessInstance.TargetObjectId, p);
+         }      
+         
+         
+     }
 }
