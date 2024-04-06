@@ -35,6 +35,8 @@ public  class AccountFetech
          Map<Id, ProcessInstanceWorkitem> mapi = new Map<Id, ProcessInstanceWorkitem>();
          for(ProcessInstanceWorkitem p : wis){
              mapi.put(p.ProcessInstance.TargetObjectId, p);
-         }                    
+         }      
+         
+         
      }
 }
